@@ -1,6 +1,6 @@
 package uk.ac.ed.inf.heatmap;
 
-/* An class that maps from a range to some data of type T
+/* An class that maps from a non overlapping range of ints to some data of type T
 *   Makes use of a binary search tree, but using ranges instead of single
 *   values.
 *   

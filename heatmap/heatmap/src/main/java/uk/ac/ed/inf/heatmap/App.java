@@ -36,12 +36,12 @@ public class App
                  * Split the line by  ", " characters, and iterate through the list of Strings,
                  *  converting them into ints and thowing an error if they cannot be converted.
                 */
-                var predStrings = scanner.nextLine().split(", ");
+                var predStrings = scanner.nextLine().split(",");
                 /** preds is an array used to store converted predictions */
                 var preds = new int[predStrings.length];
                 for(int i = 0; i < predStrings.length; i++){
                     try { 
-                        preds[i] = Integer.parseInt(predStrings[i]);
+                        preds[i] = Integer.parseInt(predStrings[i].strip());
                     } catch (NumberFormatException e){
                         System.out.println("Error parsing file - ensure all values are integers");
                         e.printStackTrace();
@@ -94,10 +94,10 @@ public class App
         var gridSquares = new ArrayList<Feature>();
         double latIncrement = (nBound - sBound) / latDimension;
         double lngIncrement = (wBound - eBound) / latDimension;
-        /** Iterate with respect to latitude */
+        /** Iterate with respect to latitude, keeping track of north and south gridsquare boundaries */
         for(double i = 0, nLat = nBound, sLat = nLat - latIncrement; i < latDimension; 
         i++, nLat -= latIncrement, sLat -= latIncrement){
-            /** Iterate with respect to longitude */
+            /** Iterate with respect to longitude, keeping track of west and east gridsquare boundaries */
             for(double j = 0, wLng = wBound, eLng = wLng - lngIncrement; j < lngDimension; 
             j++, wLng -= lngIncrement, eLng -= lngIncrement){
                 /** 

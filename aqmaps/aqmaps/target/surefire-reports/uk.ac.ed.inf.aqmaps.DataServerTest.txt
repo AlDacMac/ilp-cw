@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: uk.ac.ed.inf.aqmaps.DataServerTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.48 s <<< FAILURE! - in uk.ac.ed.inf.aqmaps.DataServerTest
+baseTest(uk.ac.ed.inf.aqmaps.DataServerTest)  Time elapsed: 0.006 s  <<< ERROR!
+java.lang.ClassCastException: class com.google.gson.internal.LinkedTreeMap cannot be cast to class uk.ac.ed.inf.aqmaps.JsonListElement (com.google.gson.internal.LinkedTreeMap and uk.ac.ed.inf.aqmaps.JsonListElement are in unnamed module of loader 'app')
+	at uk.ac.ed.inf.aqmaps.DataServerTest.<init>(DataServerTest.java:10)
+
